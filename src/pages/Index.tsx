@@ -28,7 +28,7 @@ const Index = () => {
         <div className="mt-10 max-w-xl mx-auto">
           <Input
             type="search"
-            placeholder="Search countries..."
+            placeholder="Choose where you're from..."
             className="w-full h-12 px-4 rounded-lg border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow duration-200"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -45,7 +45,11 @@ const Index = () => {
                 className="group relative bg-white p-6 focus:outline-none rounded-xl border border-gray-200 hover:border-purple-500 transition-all duration-200 hover:shadow-lg"
               >
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl">{country.flag}</span>
+                  <img 
+                    src={country.flagUrl} 
+                    alt={`${country.name} flag`}
+                    className="w-10 h-auto object-contain"
+                  />
                   <span className="text-lg font-medium text-gray-900 group-hover:text-purple-600 transition-colors duration-200">
                     {country.name}
                   </span>
